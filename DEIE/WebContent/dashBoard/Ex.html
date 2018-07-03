@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>Result Management System</title>
+
+<!-- Bootstrap Core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Custom CSS -->
+<link href="css/sb-admin.css" rel="stylesheet">
+
+<!-- Custom Fonts -->
+<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet"
+	type="text/css">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+	<div id="wrapper">
+
+		<!-- Navigation -->
+		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target=".navbar-ex1-collapse">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="index.html">Result Management
+					System - Faculty of Engineering. University of Ruhuna</a>
+			</div>
+			<!-- Top Menu Items -->
+			<ul class="nav navbar-right top-nav">
+				<li class="dropdown"><a href="#" class="dropdown-toggle"
+					data-toggle="dropdown"><i class="fa fa-user"></i> Admin <b
+						class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
+						</li>
+						<li><a href="#"><i class="fa fa-fw fa-gear"></i> Settings</a>
+						</li>
+						<li><form id="loginform1" method="post" action="Logout">
+								<a href="javascript:$('#loginform1').submit();"><i
+									class="fa fa-fw fa-power-off"></i> Log Out</a>
+							</form></li>
+
+					</ul></li>
+			</ul>
+			<!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+			<div class="collapse navbar-collapse navbar-ex1-collapse">
+				<ul class="nav navbar-nav side-nav">
+					<li><a href="indexDash.jsp"><i
+							class="fa fa-fw fa-dashboard"></i> Dashboard</a></li>
+					<li><a href="student_reg.jsp"><i class="fa fa-fw fa-table"></i>
+							Student Registration</a></li>
+					<li><a href="dept_reg.jsp"><i class="fa fa-fw fa-save"></i>
+							Department Selection</a></li>
+					<li><a href="sem_reg.jsp"><i class="fa fa-fw fa-edit"></i>
+							Semester Registration</a></li>
+					<li class="active"><a href="add_sem_result.jsp"><i
+							class="fa fa-fw fa-file"></i> Add Semester Results</a></li>
+					<li><a href="sgpa_cal.jsp"><i
+							class="fa fa-fw fa-bar-chart-o"></i> SGPA Calculator</a></li>
+					<li><a href="issue_transcript.jsp"><i
+							class="fa fa-fw fa-desktop"></i> Transcript Generator</a></li>
+					<li><a href="javascript:;" data-toggle="collapse"
+						data-target="#settings"> <i class="fa fa-fw fa-cog"></i>
+							Settings<i class="fa fa-fw fa-caret-down"></i></a>
+						<ul id="settings" class="collapse">
+							<li><a href="module_reg.jsp"> Change Modules</a></li>
+							<li><a href="grading_System.jsp"> Register Grades</a></li>
+							<li><a href="change_Pass.jsp"> Change Passwords</a></li>
+						</ul></li>
+				</ul>
+			</div>
+			<!-- /.navbar-collapse -->
+		</nav>
+
+
+
+
+		<div id="page-wrapper">
+
+			<div class="container-fluid">
+
+				<!-- Page Heading -->
+				<div class="row">
+					<div class="col-lg-12">
+						<h1 class="page-header">
+							Password Manager <small></small>
+						</h1>
+						<ol class="breadcrumb">
+							<li><i class="fa fa-dashboard"></i> <a href="indexDash.jsp">Dashboard</a>
+							</li>
+							<li class="active"><i class="fa fa-lock"></i> Change
+								Passwords</li>
+							<form id="loginformSec" method="post"
+								action="SecurityCodeActivator">
+
+								<input type="hidden" name="state" id="state" value="NONE">
+							</form>
+						</ol>
+					</div>
+				</div>
+				<!-- /.row -->
+				<div class="row">
+
+					<div class="form-group">
+						<div class="col-lg-12">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h3 class="panel-title">
+										<i class="fa fa-user fa-fw"></i> Account Details
+									</h3>
+								</div>
+
+								<form id="passwordform" action="PasswordChanger" method="post"
+									enctype="multipart/form-data">
+									<div class="panel-body">
+
+										<div style="height: 2500px">
+
+
+
+											<div class="form-group col-lg-3">
+												<label>User Name</label> <input id="userName"
+													name="userName" class="form-control">
+											</div>
+
+											<div class="form-group col-lg-3">
+												<label>Previous password</label> <input type="password"
+													name="oldpassword" id="oldpassword"
+													placeholder="Old Password" class="form-control"
+													required="required" />
+											</div>
+											<div class="form-group col-lg-3">
+												<label>New password</label> <input type="password"
+													name="newpassword" id="newpassword"
+													placeholder="new Password" class="form-control"
+													required="required" />
+											</div>
+
+											<div class="form-group col-lg-3">
+												<label>Repeat New password</label> <input type="password"
+													name="newpassword2" id="newpassword2"
+													placeholder="repeat Password" class="form-control"
+													required="required" />
+											</div>
+											<div class="form-group col-lg-3">
+												<button id="DataSubmit" type="submit"
+													class="btn btn-primary ">Change</button>
+											</div>
+											
+										</div>
+										<div class="form-group col-lg-12">
+
+											<input type="checkbox" id="securityCheck"
+												name="securityCheck" value="">
+										</div>
+									</div>
+
+
+
+
+								</form>
+
+							</div>
+
+						</div>
+					</div>
+
+
+				</div>
+				<!-- /.row -->
+
+			</div>
+			<!-- /.container-fluid -->
+
+		</div>
+		<!-- /#page-wrapper -->
+
+	</div>
+	<!-- /#wrapper -->
+	<form id="logVal" action="LoginCheck" method="post">
+		<input type="hidden" name="autofilID" value="NONE">
+	</form>
+	<!-- jQuery -->
+
+	<script src="js/jquery.js"></script>
+	<script src="js/passwordChange.js"></script>
+	<!-- Bootstrap Core JavaScript -->
+	<script src="js/bootstrap.min.js"></script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>DEIE | Dashboard</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="images/icons/favicon.ico">
+<link rel="apple-touch-icon" href="images/icons/favicon.png">
+<link rel="apple-touch-icon" sizes="72x72"
+	href="images/icons/favicon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114"
+	href="images/icons/favicon-114x114.png">
+
+
+<!--Loading bootstrap css-->
+<link type="text/css" rel="stylesheet"
+	href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700">
+<link type="text/css" rel="stylesheet"
+	href="http://fonts.googleapis.com/css?family=Oswald:400,700,300">
+<link type="text/css" rel="stylesheet"
+	href="styles/jquery-ui-1.10.4.custom.min.css">
+<link type="text/css" rel="stylesheet"
+	href="styles/font-awesome.min.css">
+<link type="text/css" rel="stylesheet" href="styles/bootstrap.min.css">
+<link type="text/css" rel="stylesheet" href="styles/animate.css">
+<link type="text/css" rel="stylesheet" href="styles/all.css">
+<link type="text/css" rel="stylesheet" href="styles/main.css">
+<link type="text/css" rel="stylesheet"
+	href="styles/style-responsive.css">
+<link type="text/css" rel="stylesheet"
+	href="styles/zabuto_calendar.min.css">
+<link type="text/css" rel="stylesheet" href="styles/pace.css">
+<link type="text/css" rel="stylesheet"
+	href="styles/jquery.news-ticker.css">
+<link type="text/css" rel="stylesheet" href="styles/jplist-custom.css">
+<link type="text/css" rel="stylesheet" href="css/datepicker.css">
+
+<link type="text/css" rel="stylesheet" href="css/radStyle.css">
+</head>
+<body>
+	<div>
+		<!--BEGIN BACK TO TOP-->
+		<a id="totop" href="#"><i class="fa fa-angle-up"></i></a>
+		<!--END BACK TO TOP-->
+		<!--BEGIN TOPBAR-->
+		<div id="header-topbar-option-demo" class="page-header-topbar">
+			<nav id="topbar" role="navigation" style="margin-bottom: 0;"
+				data-step="3" class="navbar navbar-default navbar-static-top">
+				<div class="navbar-header">
+					<button type="button" data-toggle="collapse"
+						data-target=".sidebar-collapse" class="navbar-toggle">
+						<span class="sr-only">Toggle navigation</span><span
+							class="icon-bar"></span><span class="icon-bar"></span><span
+							class="icon-bar"></span>
+					</button>
+					<a id="logo" href="index.html" class="navbar-brand"><span
+						class="fa fa-rocket"></span><span class="logo-text">DEIE</span><span
+						style="display: none" class="logo-text-icon">µ</span></a>
+				</div>
+				<div class="topbar-main">
+					<a id="menu-toggle" href="#" class="hidden-xs"><i
+						class="fa fa-bars"></i></a>
+
+
+
+					<ul class="nav navbar navbar-top-links navbar-right mbn">
+
+						<li class="dropdown topbar-user"><a data-hover="dropdown"
+							href="#" class="dropdown-toggle"><img
+								src="images/avatar/48.jpg" alt=""
+								class="img-responsive img-circle" />&nbsp;<span
+								class="hidden-xs">Administrator</span>&nbsp;<span class="caret"></span></a>
+							<ul class="dropdown-menu dropdown-user pull-right">
+
+								<li><a href="#" id="logout"><i class="fa fa-key"></i>Log
+										Out</a></li>
+							</ul></li>
+
+					</ul>
+				</div>
+			</nav>
+
+		</div>
+		<!--END TOPBAR-->
+		<div id="wrapper">
+			<!--BEGIN SIDEBAR MENU-->
+			<nav id="sidebar" role="navigation" data-step="2"
+				data-intro="Template has &lt;b&gt;many navigation styles&lt;/b&gt;"
+				data-position="right" class="navbar-default navbar-static-side">
+				<div class="sidebar-collapse menu-scroll">
+					<ul id="side-menu" class="nav">
+
+						<div class="clearfix"></div>
+						<li><a href="dashboard.html"><i
+								class="fa fa-tachometer fa-fw">
+									<div class="icon-bg bg-orange"></div>
+							</i><span class="menu-title">Dashboard</span></a></li>
+
+						<li><a href="SpecialNotices.html"><i
+								class="fa fa-desktop fa-fw">
+									<div class="icon-bg bg-green"></div>
+							</i><span class="menu-title">Special Notices</span></a></li>
+						<li><a href="News.html"><i class="fa fa-file-o fa-fw">
+									<div class="icon-bg bg-green"></div>
+							</i><span class="menu-title">News</span></a></li>
+
+						<li class="active"><a href="RADevelopment.html"><i
+								class="fa fa-fw fa-graduation-cap"">
+									<div class="icon-bg bg-green"></div>
+							</i><span class="menu-title">RADevelopment</span></a></li>
+							
+							<li><a href="Staff.html"><i
+								class="fa fa-fw fa-user"">
+									<div class="icon-bg bg-green"></div>
+							</i><span class="menu-title">Staff</span></a></li>
+
+						<li><a href="ChangePassword.html"><i
+								class="fa fa-fw fa-cog">
+									<div class="icon-bg bg-green"></div>
+							</i><span class="menu-title">Settings</span></a></li>
+
+
+
+					</ul>
+				</div>
+			</nav>
+			<!--END SIDEBAR MENU-->
+
+			<!--BEGIN PAGE WRAPPER-->
+			<div id="page-wrapper">
+				<!--BEGIN TITLE & BREADCRUMB PAGE-->
+				<div id="title-breadcrumb-option-demo" class="page-title-breadcrumb">
+					<div class="page-header pull-left">
+						<div class="page-title">Reseach and Developments</div>
+					</div>
+					<ol class="breadcrumb page-breadcrumb pull-right">
+						<li><i class="fa fa-home"></i>&nbsp;<a href="index.html">DashBoard</a>&nbsp;&nbsp;<i
+							class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
+
+						<li class="hidden"><a href="#">R & D</a>&nbsp;&nbsp;<i
+							class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
+						<li class="active">Reseach and Developments</li>
+					</ol>
+					<div class="clearfix"></div>
+				</div>
+				<!--END TITLE & BREADCRUMB PAGE-->
+				<!--BEGIN CONTENT-->
+				<div class="page-content">
+
+
+					<div class="container-fluid">
+
+						<!-- Page Heading -->
+						<div class="row">
+							<div class="col-lg-12">
+								<h1 class="page-header">Change R & D</h1>
+								<ol class="breadcrumb">
+									<li><i class="fa fa-dashboard"></i> <a href="index.html">Dashboard</a></li>
+									<li class="active"><i class="fa fa-edit"></i>R & D</li>
+								</ol>
+							</div>
+						</div>
+
+
+						<div class="row">
+							<form id="addModule" action="" method="post"
+								enctype="multipart/form-data">
+								<div class="form-group" id="AddModuleSettings">
+									<div class="col-lg-12">
+										<div class="panel panel-default">
+											<div class="panel-heading">
+												<h3 class="panel-title">
+													<i class="fa fa-align-justify fa-fw"></i> R & D Settings
+												</h3>
+											</div>
+
+											<div class="panel-body">
+
+												<div class="form-group col-lg-1">
+													<label> <input type="radio" name="moduleAction"
+														id="moduleRadAdd" class="radio-inline" value="Add" checked>
+														Add
+													</label>
+												</div>
+												<div class="form-group col-lg-2">
+													<label> <input type="radio" name="moduleAction"
+														id="moduleRadSearch" class="radio-inline" value="Search">
+														View / Edit / Disable
+													</label>
+												</div>
+
+
+											</div>
+										</div>
+									</div>
+								</div>
+							</form>
+							<!-- /.row -->
+						</div>
+
+						<!-- /.row -->
+						<div class="row">
+							<form id="addNotice" action="/DEIE/restRequest/dashBoard/rndAdd"
+								method="post" enctype="multipart/form-data">
+								<div class="form-group" id="hideAddModule">
+									<div class="col-lg-12">
+										<div class="panel panel-default">
+											<div class="panel-heading">
+												<h3 class="panel-title">
+													<i class="fa fa-book fa-fw"></i> Add - R & D
+												</h3>
+											</div>
+
+											<div class="panel-body">
+												<div class="form-group col-lg-2">
+													<label>R & D Number</label> <input class="form-control"
+														id="addR&DNumber" name="R&DNumber" placeholder="1024"
+														readonly required>
+												</div>
+												<div class="form-group col-lg-2">
+													<label>Supervisor</label> <select id="addR&DSupervisor"
+														name="R&DSupervisor" class="form-control">
+														<option>SELECT</option>
+													</select>
+
+
+
+												</div>
+												<div class="form-group col-lg-2">
+													<label>Co-Supervisor</label> <select
+														id="addR&DCoSupervisor" name="R&DCoSupervisor"
+														class="form-control">
+														<option>SELECT</option>
+													</select>
+
+
+
+												</div>
+
+												<div class="form-group col-lg-12">
+													<label>Title</label> <input class="form-control"
+														id="addR&DTitle" name="R&DTitle"
+														placeholder="Type the title here..." required>
+												</div>
+												<div class="form-group col-lg-12">
+													<label>Abstract</label>
+													<textarea class="form-control" id="addR&DAbstract"
+														name="R&DAbstract" placeholder="Type the abstract here..."
+														required></textarea>
+												</div>
+
+												<div class="form-group col-lg-12">
+													<label>Description</label>
+													<textarea class="form-control" id="addR&DDes" name="R&DDes"
+														placeholder="Type the description here..." required></textarea>
+
+												</div>
+												<div class="form-group  col-lg-3">
+													<label>Date</label>
+													<div class="form-group form-inline">
+														<input class="
+														form-control" type="text"
+															data-date="2012-12-02" data-date-format="yyyy-mm-dd"
+															id="dp3" name="R&DDate" placeholder="2010-10-12" required>
+														<span class="add-on"><i class="fa fa-calendar"></i></span>
+													</div>
+												</div>
+
+
+
+												<div class="form-group col-lg-12">
+													<label>Member Names</label> <input class="form-control"
+														id="addR&DMemberNames" name="R&DMemberNames"
+														placeholder="Mr. Kumara M.U.G, Ms. Sewwandi P.S, Mr. Tennakoon T.M.P, Mr. Wickramapala D.B"
+														required>
+												</div>
+
+
+
+												<div class="form-group col-lg-12">
+													<label>Keywords</label> <input class="form-control"
+														id="addR&DKeywords" name="R&DKeywords"
+														placeholder="RF Energy, Energy Harvesting, Patch Antenna, Voltage Multiplier, Pi Matching"
+														required>
+												</div>
+
+												<div class="form-group col-lg-12">
+													<label>Website Link</label> <input class="form-control"
+														id="addR&DWebsiteLink" name="R&DWebsiteLink"
+														placeholder="www.websiteLink.com" required>
+												</div>
+												<div class="form-group col-lg-12">
+													<label>YouTube Link</label> <input class="form-control"
+														id="addR&DYouTubeLink" name="R&DYouTubeLink"
+														placeholder="https://www.youtube.com/watch?v=aqRPPv0CwS8"
+														required>
+												</div>
+
+												<!-- /Hidden field to differentiate the action, since all the forms are been submitted to the same servlet-->
+												<input type="hidden" id="R&DActionType" name="R&DActionType"
+													value="add">
+
+
+
+												<div class="form-group col-lg-12">
+													<label>Please Select the image file/files (973x615
+														px .jpg) </label> <input type="file" size="60" id="myfile"
+														name="myfile" multiple> <br>
+
+													<div id="percent">0%</div>
+													<div class="progress">
+														<div id="bPrecentBar"
+															class="progress-bar progress-bar-success"
+															role="progressbar" aria-valuenow="10" aria-valuemin="0"
+															aria-valuemax="100" style="width: 0%"></div>
+													</div>
+													<div id="message"></div>
+
+												</div>
+
+												<div class="form-group col-lg-6">
+													<button type="submit" class="btn btn-primary ">Upload</button>
+												</div>
+
+											</div>
+										</div>
+									</div>
+								</div>
+							</form>
+							<!-- /.row -->
+						</div>
+						<!-- /.row -->
+
+						<div class="row">
+							<form id="searchModule"
+								action="/DEIE/restRequest/dashBoard/updateRnD" method="post"
+								enctype="multipart/form-data">
+								<div class="form-group" id="hideSearchModule">
+									<div class="col-lg-12">
+										<div class="panel panel-default">
+											<div class="panel-heading">
+												<h3 class="panel-title">
+													<i class="fa fa-book fa-fw"></i> Search/Update/Disable - R
+													& D
+												</h3>
+											</div>
+
+											<div class="panel-body">
+
+												<div id="searchBox1">
+													<div class="form-group col-lg-2">
+														<label>R & D Number</label> <select id="rndNumber1"
+															name="rndNumber1" class="form-control">
+															<option>SELECT</option>
+															<option>1</option>
+														</select>
+													</div>
+
+													<div class="form-group col-lg-3">
+														<label>Supervisor</label> <input class="form-control"
+															id="viewRnDSupervisor" name="viewR&DNumber" readonly>
+													</div>
+													<div class="form-group col-lg-3">
+														<label>Co-Supervisor</label> <input class="form-control"
+															id="viewRnDcoSupervisor" name="viewR&DcoSupervisor"
+															readonly>
+													</div>
+
+
+
+
+													<div class="form-group col-lg-12">
+														<label>Title</label> <input class="form-control"
+															id="addRnDTitle1" name="RnDTitle1"
+															placeholder="Type the title here..." readonly>
+													</div>
+													<div class="form-group col-lg-12">
+														<label>Abstract</label>
+														<textarea class="form-control" id="addRnDAbstract1"
+															name="RnDAbstract1"
+															placeholder="Type the abstract here..." readonly></textarea>
+													</div>
+
+													<div class="form-group col-lg-12">
+														<label>Description</label>
+														<textarea class="form-control" id="addRnDDes1"
+															name="RnDDes1" placeholder="Type the description here..."
+															readonly></textarea>
+
+													</div>
+													<div class="form-group  col-lg-3">
+														<label>Date</label>
+														<div class="form-group form-inline">
+															<input class="
+														form-control" type="text"
+																id="RnDDate1" name="RnDDate1" readonly> <span
+																class="add-on"><i class="fa fa-calendar"></i></span>
+														</div>
+													</div>
+
+
+
+													<div class="form-group col-lg-12">
+														<label>Member Names</label> <input class="form-control"
+															id="addRnDMemberNames1" name="RnDMemberNames1"
+															placeholder="Dr N.D. Jayasundere, Mr. Kumara M.U.G, Ms. Sewwandi P.S, Mr. Tennakoon T.M.P, Mr. Wickramapala D.B"
+															readonly>
+													</div>
+
+													<div class="form-group col-lg-12">
+														<label>Keywords</label> <input class="form-control"
+															id="addRnDKeywords1" name="RnDKeywords1"
+															placeholder="RF Energy, Energy Harvesting, Patch Antenna, Voltage Multiplier, Pi Matching"
+															readonly>
+													</div>
+
+													<div class="form-group col-lg-12">
+														<label>Website Link</label> <input class="form-control"
+															id="addRnDWebsiteLink1" name="RnDWebsiteLink1"
+															placeholder="www.websiteLink.com" readonly>
+													</div>
+													<div class="form-group col-lg-12">
+														<label>YouTube Link</label> <input class="form-control"
+															id="addRnDYouTubeLink1" name="RnDYouTubeLink1"
+															placeholder="https://www.youtube.com/watch?v=aqRPPv0CwS8"
+															readonly>
+													</div>
+
+
+
+
+													<!-- /Hidden field to differentiate the action, since all the forms are been submitted to the same servlet-->
+													<input type="hidden" id="searchnoticeActionType"
+														name="searchnoticeActionType" value="search">
+
+													<div id="editAlterSerach">
+
+														<div id="imageTagSearch" class="form-group col-lg-12">
+															<label>Image </label>
+														</div>
+
+														<div class="form-group col-lg-12">
+															<div class="col-md-4">
+
+
+																<div id="imageDisplay" class="text-center mbl"
+																	class="form-group col-lg-12">
+																	<img id="searchImage" alt="" class="img-responsive" />
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div id="searchBox2">
+													<div class="form-group col-lg-2">
+														<label>R & D Number</label> <input class="form-control"
+															id="rndNumber2" name="rndNumber2" placeholder="1024"
+															readonly>
+													</div>
+
+													<div class="form-group col-lg-2">
+														<label>Supervisor</label> <select id="updateRnDSupervisor"
+															name="R&DSupervisor" class="form-control">
+															<option>SELECT</option>
+														</select>
+
+
+
+													</div>
+													<div class="form-group col-lg-2">
+														<label>Co-Supervisor</label> <select
+															id="updateRnDCoSupervisor" name="R&DCoSupervisor"
+															class="form-control">
+															<option>SELECT</option>
+														</select>
+
+
+
+													</div>
+
+
+
+
+													<div class="form-group col-lg-12">
+														<label>Title</label> <input class="form-control"
+															id="addRnDTitle2" name="RnDTitle2"
+															placeholder="Type the title here...">
+													</div>
+													<div class="form-group col-lg-12">
+														<label>Abstract</label>
+														<textarea class="form-control" id="addRnDAbstract2"
+															name="RnDAbstract2"
+															placeholder="Type the abstract here..."></textarea>
+													</div>
+
+													<div class="form-group col-lg-12">
+														<label>Description</label>
+														<textarea class="form-control" id="addRnDDes2"
+															name="RnDDes2" placeholder="Type the description here..."></textarea>
+
+													</div>
+													<div class="form-group  col-lg-3">
+														<label>Date</label>
+														<div class="form-group form-inline">
+															<input class="
+														form-control" type="text"
+																data-date="2012-12-02" data-date-format="yyyy-mm-dd"
+																id="dp4" name="RnDDate2" placeholder="2010-10-12">
+															<span class="add-on"><i class="fa fa-calendar"></i></span>
+														</div>
+													</div>
+
+
+
+													<div class="form-group col-lg-12">
+														<label>Member Names</label> <input class="form-control"
+															id="addRnDMemberNames2" name="RnDMemberNames2"
+															placeholder="Dr N.D. Jayasundere, Mr. Kumara M.U.G, Ms. Sewwandi P.S, Mr. Tennakoon T.M.P, Mr. Wickramapala D.B">
+													</div>
+
+													<div class="form-group col-lg-12">
+														<label>Keywords</label> <input class="form-control"
+															id="addRnDKeywords2" name="RnDKeywords2"
+															placeholder="RF Energy, Energy Harvesting, Patch Antenna, Voltage Multiplier, Pi Matching">
+													</div>
+
+													<div class="form-group col-lg-12">
+														<label>Website Link</label> <input class="form-control"
+															id="addRnDWebsiteLink2" name="RnDWebsiteLink2"
+															placeholder="www.websiteLink.com">
+													</div>
+													<div class="form-group col-lg-12">
+														<label>YouTube Link</label> <input class="form-control"
+															id="addRnDYouTubeLink2" name="RnDYouTubeLink2"
+															placeholder="https://www.youtube.com/watch?v=aqRPPv0CwS8">
+													</div>
+
+
+
+													<div class="form-group col-lg-12">
+														<label>Please Select the image file/files (973x615
+															px .jpg) </label> <input type="file" size="60" id="Smyfile"
+															name="Smyfile" multiple> <br>
+
+														<div id="Spercent">0%</div>
+														<div class="progress">
+															<div id="SbPrecentBar"
+																class="progress-bar progress-bar-success"
+																role="progressbar" aria-valuenow="10" aria-valuemin="0"
+																aria-valuemax="100" style="width: 0%"></div>
+														</div>
+														<div id="Smessage"></div>
+
+													</div>
+
+												</div>
+
+
+												<div id="searchButtons" class="form-group col-lg-6">
+													<p>
+														<button id="editButton" type="button"
+															class="btn btn-primary">Edit</button>
+														<button id="disableButton" type="submit"
+															class="btn btn-primary">Disable</button>
+														<button id="updateButton" type="button"
+															class="btn btn-primary">Update</button>
+													</p>
+												</div>
+
+
+											</div>
+
+										</div>
+									</div>
+								</div>
+							</form>
+							<!-- /.row -->
+						</div>
+
+					</div>
+					<!-- /.container-fluid -->
+
+
+
+
+				</div>
+				<!--END CONTENT-->
+				<!--BEGIN FOOTER-->
+				<div id="footer">
+					<div class="copyright">
+						<a href="http://themifycloud.com">2014 © DEIE</a>
+					</div>
+				</div>
+				<!--END FOOTER-->
+			</div>
+			<!--END PAGE WRAPPER-->
+		</div>
+	</div>
+	<script src="script/jquery-1.10.2.min.js"></script>
+	<script src="script/jquery-migrate-1.2.1.min.js"></script>
+	<script src="script/jquery-ui.js"></script>
+	<script src="script/bootstrap.min.js"></script>
+	<script src="script/bootstrap-hover-dropdown.js"></script>
+	<script src="script/html5shiv.js"></script>
+	<script src="script/respond.min.js"></script>
+	<script src="script/jquery.metisMenu.js"></script>
+	<script src="script/jquery.slimscroll.js"></script>
+	<script src="script/jquery.cookie.js"></script>
+	<script src="script/icheck.min.js"></script>
+	<script src="script/custom.min.js"></script>
+	<script src="script/jquery.news-ticker.js"></script>
+	<script src="script/jquery.menu.js"></script>
+	<script src="script/pace.min.js"></script>
+	<script src="script/holder.js"></script>
+	<script src="script/responsive-tabs.js"></script>
+	<script src="script/jquery.flot.js"></script>
+	<script src="script/jquery.flot.categories.js"></script>
+	<script src="script/jquery.flot.pie.js"></script>
+	<script src="script/jquery.flot.tooltip.js"></script>
+	<script src="script/jquery.flot.resize.js"></script>
+	<script src="script/jquery.flot.fillbetween.js"></script>
+	<script src="script/jquery.flot.stack.js"></script>
+	<script src="script/jquery.flot.spline.js"></script>
+	<script src="script/zabuto_calendar.min.js"></script>
+	<script src="script/index.js"></script>
+	<script src="script/highcharts.js"></script>
+	<script src="script/data.js"></script>
+	<script src="script/drilldown.js"></script>
+	<script src="script/exporting.js"></script>
+	<script src="script/highcharts-more.js"></script>
+	<script src="script/charts-highchart-pie.js"></script>
+	<script src="script/charts-highchart-more.js"></script>
+	<script src="script/modernizr.min.js"></script>
+	<script src="script/jplist.min.js"></script>
+	<script src="script/jplist.js"></script>
+
+	<!--CORE JAVASCRIPT-->
+	<script src="script/main.js"></script>
+	<script>
+		(function(i, s, o, g, r, a, m) {
+			i['GoogleAnalyticsObject'] = r;
+			i[r] = i[r] || function() {
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date();
+			a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+			a.async = 1;
+			a.src = g;
+			m.parentNode.insertBefore(a, m)
+		})(window, document, 'script',
+				'//www.google-analytics.com/analytics.js', 'ga');
+		ga('create', 'UA-145464-12', 'auto');
+		ga('send', 'pageview');
+	</script>
+
+	<!-- jQuery -->
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery.form.js"></script>
+	<script src="js/bootstrap-datepicker.js"></script>
+	<script src="js/rad_Send.js"></script>
+	<script src="js/logout.js"></script>
+</body>
+</html>
